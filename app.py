@@ -22,7 +22,7 @@ app = Flask(__name__)
 # Конфигурация
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'your-secret-key-here')
 app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'your-jwt-secret-key')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///PetCare.db?check_same_thread=False'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://pet_osow_user:2rvhAkqrVRTBDrXgVxtFnFCMRNU3TOdG@dpg-d1dktkre5dus73dm1edg-a.frankfurt-postgres.render.com/pet_osow'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
     'poolclass': NullPool,  # Отключаем пул соединений для SQLite
